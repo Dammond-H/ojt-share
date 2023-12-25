@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainForm</class>
+ <widget class="QWidget" name="MainForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>296</width>
+    <height>447</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QQ主页面</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_4">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="3,2,1,1,1,1">
+     <property name="spacing">
+      <number>6</number>
+     </property>
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMaximumSize</enum>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="nameContent">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="titlePicture">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="transferText">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="statusText">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="hiddenText">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="promptText">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>24</width>
+       <height>16</height>
+      </size>
+     </property>
+     <widget class="QWidget" name="message">
+      <attribute name="title">
+       <string>消息</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_2" stretch="18,1">
+           <item>
+            <widget class="QScrollArea" name="scrollArea">
+             <property name="widgetResizable">
+              <bool>true</bool>
+             </property>
+             <widget class="QWidget" name="scrollAreaWidgetContents">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>248</width>
+                <height>190</height>
+               </rect>
+              </property>
+             </widget>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout" stretch="6,1,1">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="sizeConstraint">
+              <enum>QLayout::SetMinimumSize</enum>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QPlainTextEdit" name="PText2">
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="backgroundVisible">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="sendBT">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>80</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+    border-radius: 5px;
+}
+QPushButton:hover{
+    background-color: deepskyblue;
+}</string>
+               </property>
+               <property name="text">
+                <string>发送</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="addBT">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>80</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+	font-size:16px;
+    background: url(&quot;../images/add.png&quot;);
+	background-size:contain;
+    border: 0px;
+	background-size: cover;
+    border-radius: 5px;
+}
+QPushButton:hover{
+    background-color: deepskyblue;
+}</string>
+               </property>
+               <property name="text">
+                <string>+</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QPushButton" name="fileBT">
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+	boder-radius:8px;
+}</string>
+             </property>
+             <property name="text">
+              <string>文件</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pictureBT">
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+	boder-radius:8px;
+}</string>
+             </property>
+             <property name="text">
+              <string>图片</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="movieBT">
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+	boder-radius:8px;
+}</string>
+             </property>
+             <property name="text">
+              <string>视频</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="setting">
+      <attribute name="title">
+       <string>设置</string>
+      </attribute>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>30</y>
+         <width>141</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QPushButton" name="personBT">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+    font-size: 16px;
+    border-radius: 5px;
+}
+QPushButton:hover{
+    background-color: deepskyblue;
+}</string>
+          </property>
+          <property name="text">
+           <string>个人中心</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="accountBT">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+    font-size: 16px;
+    border-radius: 5px;
+}
+QPushButton:hover{
+    background-color: deepskyblue;
+}</string>
+          </property>
+          <property name="text">
+           <string>账户安全</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="changeBT">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+    font-size: 16px;
+    border-radius: 5px;
+}
+QPushButton:hover{
+    background-color: deepskyblue;
+}</string>
+          </property>
+          <property name="text">
+           <string>切换账户</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="exitBT">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+    font-size: 16px;
+    border-radius: 5px;
+}
+QPushButton:hover{
+    background-color: deepskyblue;
+}</string>
+          </property>
+          <property name="text">
+           <string>退出</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

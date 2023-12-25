@@ -1,0 +1,9 @@
+QPushButton{
+    font-size: 16px;
+    background: url("../images/add.png");
+    border: 0px;
+    border-radius: 5px;
+}
+QPushButton:hover{
+    background-color: whitesmoke;
+}
