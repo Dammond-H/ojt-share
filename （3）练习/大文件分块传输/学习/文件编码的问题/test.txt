@@ -1,0 +1,72 @@
+分类特征：
+特征值并不是连续的，而是离散的，无序的。通常我们需要对其进行特征数字化。
+One-Hot编码，又称为一位有效编码，主要是采用N位状态寄存器来对N个状态进行编码，每个状态都由他独立的寄存器位，并且在任意时候只有一位有效。
+
+独热编码：
+一种简单的处理离散型编码方式（特征数字化->计算欧式距离）
+独热编码的值只有0、1，解决了分类器不好处理属性数据的问题，在一定程度上起到了扩充特征的作用，防止了过拟合。
+
+
+
+随机森林（Random Forest）：
+作为新兴起的、高度灵活的一种机器学习算法
+2013年百度校园电影推荐系统大赛、2014年阿里巴巴天池大数据竞赛以及Kaggle数据科学竞赛
+随机森林就是通过集成学习的思想将多棵树集成的一种算法，它的基本单元是决策树。其实从直观角度来解释，每棵决策树都是一个分类器（假设现在针对的是分类问题），那么对于一个输入样本，N棵树会有N个分类结果。而随机森林集成了所有的分类投票结果，将投票次数最多的类别指定为最终的输出，这就是一种最简单的 Bagging 思想。
+优点：
+
+•	在当前所有算法中，具有极好的准确率/It is unexcelled in accuracy among current algorithms；
+•	能够有效地运行在大数据集上/It runs efficiently on large data bases；
+•	能够处理具有高维特征的输入样本，而且不需要降维/It can handle thousands of input variables without variable deletion；
+•	能够评估各个特征在分类问题上的重要性/It gives estimates of what variables are important in the classification；
+•	在生成过程中，能够获取到内部生成误差的一种无偏估计/It generates an internal unbiased estimate of the generalization error as the forest building progresses；
+•	对于缺省值问题也能够获得很好得结果/It has an effective method for estimating missing data and maintains accuracy when a large proportion of the data are missing
+https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm#inter
+https://scikit-learn.org/dev/modules/ensemble.html
+
+
+每棵树的按照如下规则生成：
+
+　　1）如果训练集大小为N，对于每棵树而言，随机且有放回地从训练集中的抽取N个训练样本（这种采样方式称为bootstrap sample方法），作为该树的训练集；
+
+　　从这里我们可以知道：每棵树的训练集都是不同的，而且里面包含重复的训练样本（理解这点很重要）。
+
+　　为什么要随机抽样训练集？（add @2016.05.28）
+
+　　如果不进行随机抽样，每棵树的训练集都一样，那么最终训练出的树分类结果也是完全一样的，这样的话完全没有bagging的必要；
+
+　　为什么要有放回地抽样？（add @2016.05.28）
+
+　　我理解的是这样的：如果不是有放回的抽样，那么每棵树的训练样本都是不同的，都是没有交集的，这样每棵树都是"有偏的"，都是绝对"片面的"（当然这样说可能不对），也就是说每棵树训练出来都是有很大的差异的；而随机森林最后分类取决于多棵树（弱分类器）的投票表决，这种表决应该是"求同"，因此使用完全不同的训练集来训练每棵树这样对最终分类结果是没有帮助的，这样无异于是"盲人摸象"。
+
+　　2）如果每个样本的特征维度为M，指定一个常数m<<M，随机地从M个特征中选取m个特征子集，每次树进行分裂时，从这m个特征中选择最优的；
+
+　　3）每棵树都尽最大程度的生长，并且没有剪枝过程。
+
+　　一开始我们提到的随机森林中的“随机”就是指的这里的两个随机性。两个随机性的引入对随机森林的分类性能至关重要。由于它们的引入，使得随机森林不容易陷入过拟合，并且具有很好得抗噪能力（比如：对缺省值不敏感）。
+
+
+
+
+
+
+随机森林讲解：
+https://blog.csdn.net/cpc784221489/article/details/92085702#_label3
+
+
+
+
+
+
+
+
+
+
+
+1、https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm#inter
+2、https://scikit-learn.org/dev/modules/ensemble.html
+3、https://www.cnblogs.com/Sugar-Chl/p/10146054.html
+4、https://blog.csdn.net/edogawachia/article/details/79357844
+5、https://blog.csdn.net/y0367/article/details/51501780
+
+
+
